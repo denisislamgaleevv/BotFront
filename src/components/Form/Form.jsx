@@ -23,7 +23,7 @@ export const Form =()=>{
             tg.MainButton.show();
         }
 
-    }, [])
+    }, [street, city])
     
     const onChangeCity = (e) =>{
         setCity(e.target.value); 

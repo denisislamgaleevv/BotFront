@@ -4,6 +4,7 @@ import {Routes, Route} from "react-router-dom";
 import {Header} from './components/Header/Header'
 import {ProductList} from './components/ProductList/ProductList'
 import {Form} from './components/Form/Form'
+import {Button} from './components/Button/Button'
 import {useTelegram} from './hooks/useTelegram'
  
 function App() {
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <div className='container'>  
-      <button className='btn' onClick = {onToggleButton}>Toggle</button>
+      
        <Header/>
        <Routes>
         <Route index element = {<ProductList/>}/> 
