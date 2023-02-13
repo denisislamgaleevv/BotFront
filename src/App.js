@@ -4,26 +4,24 @@ import {Routes, Route} from "react-router-dom";
 import {Header} from './components/Header/Header'
 import {ProductList} from './components/ProductList/ProductList'
 import {Form} from './components/Form/Form'
-const tg = window.Telegram.WebApp; 
-
+import {useTelegram} from './hooks/useTelegram'
+ 
 function App() {
+  const {onToggleButton, tg} = useTelegram();
   useEffect(()=>{
     tg.ready()
   }, [])
-  const closeEvent =()=>{
-    tg.close()
-  }
+  
   return (
     <div className="App">
-       
       <div className='container'>  
-       <h1>It's work</h1>
+      <button className='btn' onClick = {onToggleButton}>Toggle</button>
        <Header/>
        <Routes>
         <Route index element = {<ProductList/>}/> 
         <Route path = {'/form'} element={<Form/>}/>
        </Routes>
-       <button onClick = {closeEvent} className="btn">Закрыть</button>
+       
        </div>
     </div>
   );

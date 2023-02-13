@@ -19,9 +19,5 @@ body{
   display: flex;
   flex-flow: column wrap;
 }
-.btn{
-  color: white;
-  background-color: black;
-  font-size: 32px;
-  height: 40px;
-}
+ 
+
