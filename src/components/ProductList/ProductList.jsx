@@ -5,14 +5,14 @@ import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
 
 const products = [
-    {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые', img: 'https://static.detmir.jpg'},
-    {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая', img: 'https://fridaywear.jpg'},
-    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые',  img: 'https://static.detmir.jpg'},
-    {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая', img: 'https://static.detmir.jpg'},
-    {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые', img: 'https://static.detmir.jpg'},
-    {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая', img: 'https://static.detmir.jpg'},
-    {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые', img: 'https://static.detmir.jpg'},
-    {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая', img: 'https://static.detmir.jpg'},
+    {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые', img: 'https://static.detmir.st/media_pim/224/978/4978224/450/1.jpg?1669368018609'},
+    {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая', img: 'https://fridaywear.ru/upload/iblock/b54/b54a2767617f37db8a9dcc77bf09a290.jpg'},
+    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые',  img: 'https://static.detmir.st/media_pim/224/978/4978224/450/1.jpg?1669368018609'},
+    {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая', img: 'https://fridaywear.ru/upload/iblock/b54/b54a2767617f37db8a9dcc77bf09a290.jpg'},
+    {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые', img: 'https://static.detmir.st/media_pim/224/978/4978224/450/1.jpg?1669368018609'},
+    {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая', img: 'https://fridaywear.ru/upload/iblock/b54/b54a2767617f37db8a9dcc77bf09a290.jpg'},
+    {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые', img: 'https://static.detmir.st/media_pim/224/978/4978224/450/1.jpg?1669368018609'},
+    {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая', img: 'https://fridaywear.ru/upload/iblock/b54/b54a2767617f37db8a9dcc77bf09a290.jpg'},
 ]
 
 const getTotalPrice = (items = []) => {
