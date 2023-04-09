@@ -2,7 +2,7 @@ import React from 'react';
  
 import './ProductItem.css';
 
-export const ProductItem = ({product, className, onAdd, img}) => {
+export const ProductItem = ({product, className, onAdd}) => {
 
     const onAddHandler = () => {
         onAdd(product);

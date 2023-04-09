@@ -15,14 +15,14 @@ const products = [
     {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая', img: 'https://fridaywear.ru/upload/iblock/b54/b54a2767617f37db8a9dcc77bf09a290.jpg'},
 ]
 
+
 const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
         return acc += item.price
     }, 0)
 }
 
-export  const ProductList = () => {
-
+export const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
     const {tg, queryId} = useTelegram();
 
@@ -51,6 +51,7 @@ export  const ProductList = () => {
     const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
         let newItems = [];
+
         if(alreadyAdded) {
             newItems = addedItems.filter(item => item.id !== product.id);
         } else {
@@ -69,13 +70,10 @@ export  const ProductList = () => {
         }
     }
 
-    
-
     return (
         <div className={'list'}>
             {products.map(item => (
                 <ProductItem
-                     
                     product={item}
                     onAdd={onAdd}
                     className={'item'}
@@ -84,5 +82,4 @@ export  const ProductList = () => {
         </div>
     );
 };
-
  
