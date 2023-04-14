@@ -24,9 +24,11 @@ const getTotalPrice = (items = []) => {
 
 export const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
-    const {tg, queryId} = useTelegram();
+
+    const {tg, queryId, onClose} = useTelegram();
 
     const onSendData = useCallback(() => {
+        
         const data = {
             products: addedItems,
             totalPrice: getTotalPrice(addedItems),
@@ -39,6 +41,7 @@ export const ProductList = () => {
             },
             body: JSON.stringify(data)
         })
+        
     }, [addedItems])
 
     useEffect(() => {
@@ -67,6 +70,7 @@ export const ProductList = () => {
             tg.MainButton.setParams({
                 text: `Купить ${getTotalPrice(newItems)}`
             })
+            tg.onClose()
         }
     }
 
